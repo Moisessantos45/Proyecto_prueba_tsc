@@ -1,11 +1,13 @@
 import expres from 'express';
 import router from './routers/diares';
 import dotenv from "dotenv"
+import cors from "cors"
 
 const app = expres();
 
 app.use(expres.json());
 dotenv.config()
+app.use(cors())
 
 const PORT =process.env.PORT || 4000;
 
